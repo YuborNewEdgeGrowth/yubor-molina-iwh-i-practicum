@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const PRIVATE_APP_ACCESS = process.env.HUBSPOR_PRIVATE_APP;
+const PRIVATE_APP_ACCESS = process.env.HUBSPOT_PRIVATE_APP;
 
 
 const headers = {

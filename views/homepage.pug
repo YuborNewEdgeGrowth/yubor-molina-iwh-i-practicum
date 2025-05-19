@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    title Custom Object Table
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        padding: 2rem;
+      }
+      table {
+        border-collapse: collapse;
+        width: auto;
+        margin-top: 1rem;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px 12px;
+        text-align: left;
+      }
+      th {
+        background-color: pink;
+      }
+      a {
+        color: blue;
+        text-decoration: underline;
+      }
+  body
+    h1 Custom Object Table
+
+    a(href="/update-cobj") Add/Update this table
+
+    table
+      thead
+        tr
+          th Id
+          th Name
+          th Notes
+          th Value
+
+      tbody
+        each item in data
+          tr
+            td= item.properties.hs_object_id
+            td= item.properties.name
+            td= item.properties.notes
+            td= item.properties.value
