@@ -1,0 +1,22 @@
+doctype html
+html 
+  head 
+    title Update Custom Object Form | Integrating With HubSpot I Practicum.
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body    
+    h1 Create Records
+    a(href="/") Return to the homepage
+
+    form(action="/update-cobj" method="POST")
+      div
+        label Name:
+        input(type="text" name="name" required)
+      div
+        label Notes:
+        input(type="text" name="notes" required)
+      div
+        label Value:
+        input(type="number" name="value" required)
+      div
+        button(type="submit") Submit
