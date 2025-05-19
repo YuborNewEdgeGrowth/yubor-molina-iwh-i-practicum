@@ -11,10 +11,20 @@ app.use(express.json());
 const PRIVATE_APP_ACCESS = process.env.HUBSPOR_PRIVATE_APP;
 
 
-const header = {
+const headers = {
     'Content-Type':'application/json',
     'Authorization': `Bearer ${PRIVATE_APP_ACCESS}`
 }
+
+app.get("/", async(req, res) =>{
+    try{
+        let games = await axios.get("https://api.hubapi.com/crm/v3/objects/games?properties=name,notes,value", {headers});
+        let data = games.data.results;
+        res.render("homepage", {data})
+    }catch(error){
+        console.log(error)
+    }
+})
 
 
 
