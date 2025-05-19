@@ -26,6 +26,10 @@ app.get("/", async(req, res) =>{
     }
 })
 
+app.get("/update-cobj", async(req, res) =>{
+    res.render('updates')
+})
+
 
 
 
