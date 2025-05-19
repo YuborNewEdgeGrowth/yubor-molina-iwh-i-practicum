@@ -41,7 +41,7 @@ app.post("/update-cobj", async(req, res) =>{
                 value: value
             }
         }
-        const endpoint = "https://api.hubapi.com/crm/v3/objects/transactions"
+        const endpoint = "https://api.hubapi.com/crm/v3/objects/games"
         const response = await axios.post(endpoint, body, {headers});
         res.redirect("/");
     }catch(error){
